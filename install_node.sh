@@ -389,7 +389,7 @@ iptables -F CUSTOM-INPUT
 # Добавляем правила в нашу цепочку
 iptables -A CUSTOM-INPUT -i lo -j ACCEPT
 iptables -A CUSTOM-INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-iptables -A CUSTOM-INPUT -p tcp --dport 22 -j ACCEPT      # SSH
+iptables -A CUSTOM-INPUT -p tcp --dport 222 -j ACCEPT      # SSH на порту 222
 iptables -A CUSTOM-INPUT -p tcp --dport 80 -j ACCEPT      # HTTP (для SSL)
 iptables -A CUSTOM-INPUT -p tcp --dport 443 -j ACCEPT     # HTTPS
 iptables -A CUSTOM-INPUT -p tcp --dport 2222 -j ACCEPT    # Remnawave API
